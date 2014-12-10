@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0">
+    <define name="country-enumeration">
+        <a:documentation>ISO 3166 definition of a Country</a:documentation>
+        <choice>
+            <value>AA</value>
+            <a:documentation>Africa</a:documentation>
+            <value>AD</value>
+            <a:documentation>Andorra</a:documentation>
+            <value>AE</value>
+            <a:documentation>United Arab Emirates</a:documentation>
+            <value>AF</value>
+            <a:documentation>Afghanistan</a:documentation>
+            <value>AG</value>
+            <a:documentation>Antigua &amp; Barbuda</a:documentation>
+            <value>AI</value>
+            <a:documentation>Anguilla</a:documentation>
+            <value>AL</value>
+            <a:documentation>Albania</a:documentation>
+            <value>AM</value>
+            <a:documentation>Armenia</a:documentation>
+            <value>AN</value>
+            <a:documentation>Netherlands Antilles</a:documentation>
+            <value>AO</value>
+            <a:documentation>Angola</a:documentation>
+            <value>AQ</value>
+            <a:documentation>Antarctica</a:documentation>
+            <value>AR</value>
+            <a:documentation>Argentina</a:documentation>
+            <value>AS</value>
+            <a:documentation>American Samoa</a:documentation>
+            <value>AT</value>
+            <a:documentation>Austria</a:documentation>
+            <value>AU</value>
+            <a:documentation>Australia</a:documentation>
+            <value>AW</value>
+            <a:documentation>Aruba</a:documentation>
+            <value>AX</value>
+            <a:documentation>Asia</a:documentation>
+            <value>AZ</value>
+            <a:documentation>Azerbaijan</a:documentation>
+            <value>BA</value>
+            <a:documentation>Bosnia &amp; Herzegowina</a:documentation>
+            <value>BB</value>
+            <a:documentation>Barbados</a:documentation>
+            <value>BD</value>
+            <a:documentation>Bangladesh</a:documentation>
+            <value>BE</value>
+            <a:documentation>Belgium</a:documentation>
+            <value>BF</value>
+            <a:documentation>Burkina Faso</a:documentation>
+            <value>BG</value>
+            <a:documentation>Bulgaria</a:documentation>
+            <value>BH</value>
+            <a:documentation>Bahrain</a:documentation>
+            <value>BI</value>
+            <a:documentation>Burundi</a:documentation>
+            <value>BJ</value>
+            <a:documentation>Benin</a:documentation>
+            <value>BM</value>
+            <a:documentation>Bermuda</a:documentation>
+            <value>BN</value>
+            <a:documentation>Brunei Darussalem</a:documentation>
+            <value>BO</value>
+            <a:documentation>Bolivia</a:documentation>
+            <value>BR</value>
+            <a:documentation>Brazil</a:documentation>
+            <value>BS</value>
+            <a:documentation>Bahamas</a:documentation>
+            <value>BT</value>
+            <a:documentation>Bhutan</a:documentation>
+            <value>BV</value>
+            <a:documentation>Bouvet Island</a:documentation>
+            <value>BW</value>
+            <a:documentation>Botswana</a:documentation>
+            <value>BY</value>
+            <a:documentation>Belarus</a:documentation>
+            <value>BZ</value>
+            <a:documentation>Belize</a:documentation>
+            <value>CA</value>
+            <a:documentation>Canada</a:documentation>
+            <value>CC</value>
+            <a:documentation>Cocos (Keeling) Islands</a:documentation>
+            <value>CF</value>
+            <a:documentation>Central African Republic</a:documentation>
+            <value>CG</value>
+            <a:documentation>Congo</a:documentation>
+            <value>CH</value>
+            <a:documentation>Switzerland</a:documentation>
+            <value>CI</value>
+            <a:documentation>Cote D'Ivorie</a:documentation>
+            <value>CK</value>
+            <a:documentation>Cook Islands</a:documentation>
+            <value>CL</value>
+            <a:documentation>Chile</a:documentation>
+            <value>CM</value>
+            <a:documentation>Cameroon</a:documentation>
+            <value>CN</value>
+            <a:documentation>China</a:documentation>
+            <value>CO</value>
+            <a:documentation>Colombia</a:documentation>
+            <value>CR</value>
+            <a:documentation>Costa Rica</a:documentation>
+            <value>CT</value>
+            <a:documentation>Continent</a:documentation>
+            <value>CU</value>
+            <a:documentation>Cuba</a:documentation>
+            <value>CV</value>
+            <a:documentation>Cape Verde</a:documentation>
+            <value>CX</value>
+            <a:documentation>Christmas Islands</a:documentation>
+            <value>CY</value>
+            <a:documentation>Cyprus</a:documentation>
+            <value>CZ</value>
+            <a:documentation>Czech Republic</a:documentation>
+            <value>DE</value>
+            <a:documentation>Germany</a:documentation>
+            <value>DJ</value>
+            <a:documentation>Djibouti</a:documentation>
+            <value>DK</value>
+            <a:documentation>Denmark</a:documentation>
+            <value>DM</value>
+            <a:documentation>Dominica</a:documentation>
+            <value>DO</value>
+            <a:documentation>Dominican Republic</a:documentation>
+            <value>DT</value>
+            <a:documentation>Domestic</a:documentation>
+            <value>DZ</value>
+            <a:documentation>Algeria</a:documentation>
+            <value>EC</value>
+            <a:documentation>Ecuador</a:documentation>
+            <value>EE</value>
+            <a:documentation>Estonia</a:documentation>
+            <value>EG</value>
+            <a:documentation>Egypt</a:documentation>
+            <value>EH</value>
+            <a:documentation>Western Sahara</a:documentation>
+            <value>EN</value>
+            <a:documentation>England</a:documentation>
+            <value>ER</value>
+            <a:documentation>Eritrea</a:documentation>
+            <value>ES</value>
+            <a:documentation>Spain</a:documentation>
+            <value>ET</value>
+            <a:documentation>Ethiopia</a:documentation>
+            <value>EU</value>
+            <a:documentation>Europe</a:documentation>
+            <value>FI</value>
+            <a:documentation>Finland</a:documentation>
+            <value>FJ</value>
+            <a:documentation>Fiji</a:documentation>
+            <value>FK</value>
+            <a:documentation>Falkland Islands</a:documentation>
+            <value>FM</value>
+            <a:documentation>Micronesia</a:documentation>
+            <value>FO</value>
+            <a:documentation>Faroe Islands</a:documentation>
+            <value>FR</value>
+            <a:documentation>France</a:documentation>
+            <value>GA</value>
+            <a:documentation>Gabon</a:documentation>
+            <value>GD</value>
+            <a:documentation>Grenada</a:documentation>
+            <value>GE</value>
+            <a:documentation>Georgia</a:documentation>
+            <value>GF</value>
+            <a:documentation>French Guiana</a:documentation>
+            <value>GH</value>
+            <a:documentation>Ghana</a:documentation>
+            <value>GI</value>
+            <a:documentation>Gibraltar</a:documentation>
+            <value>GL</value>
+            <a:documentation>Greenland</a:documentation>
+            <value>GM</value>
+            <a:documentation>Gambia</a:documentation>
+            <value>GN</value>
+            <a:documentation>Guinea</a:documentation>
+            <value>GP</value>
+            <a:documentation>Guadeloupe</a:documentation>
+            <value>GQ</value>
+            <a:documentation>Equatorial Guinea</a:documentation>
+            <value>GR</value>
+            <a:documentation>Greece</a:documentation>
+            <value>GS</value>
+            <a:documentation>South Georgia &amp; the South Sa</a:documentation>
+            <value>GT</value>
+            <a:documentation>Guatemala</a:documentation>
+            <value>GU</value>
+            <a:documentation>Guam</a:documentation>
+            <value>GW</value>
+            <a:documentation>Guinea-Bissau</a:documentation>
+            <value>GY</value>
+            <a:documentation>Guyana</a:documentation>
+            <value>HK</value>
+            <a:documentation>Hong Kong</a:documentation>
+            <value>HM</value>
+            <a:documentation>Heard &amp; Mc Donald Islands</a:documentation>
+            <value>HN</value>
+            <a:documentation>Honduras</a:documentation>
+            <value>HR</value>
+            <a:documentation>Croatia</a:documentation>
+            <value>HT</value>
+            <a:documentation>Haiti</a:documentation>
+            <value>HU</value>
+            <a:documentation>Hungary</a:documentation>
+            <value>ID</value>
+            <a:documentation>Indonesia</a:documentation>
+            <value>IE</value>
+            <a:documentation>Republic of Ireland</a:documentation>
+            <value>IL</value>
+            <a:documentation>Israel</a:documentation>
+            <value>IN</value>
+            <a:documentation>India</a:documentation>
+            <value>IO</value>
+            <a:documentation>Britsh Indian Ocean Territor</a:documentation>
+            <value>IQ</value>
+            <a:documentation>Iraq</a:documentation>
+            <value>IR</value>
+            <a:documentation>Iran</a:documentation>
+            <value>IS</value>
+            <a:documentation>Iceland</a:documentation>
+            <value>IT</value>
+            <a:documentation>Italy</a:documentation>
+            <value>JM</value>
+            <a:documentation>Jamaica</a:documentation>
+            <value>JO</value>
+            <a:documentation>Jordan</a:documentation>
+            <value>JP</value>
+            <a:documentation>Japan</a:documentation>
+            <value>KE</value>
+            <a:documentation>Kenya</a:documentation>
+            <value>KG</value>
+            <a:documentation>Kyrgyzstan</a:documentation>
+            <value>KH</value>
+            <a:documentation>Cambodia</a:documentation>
+            <value>KI</value>
+            <a:documentation>Kiribati</a:documentation>
+            <value>KM</value>
+            <a:documentation>Comoros</a:documentation>
+            <value>KN</value>
+            <a:documentation>Saint Kitts &amp; Nevis</a:documentation>
+            <value>KP</value>
+            <a:documentation>North Korea</a:documentation>
+            <value>KR</value>
+            <a:documentation>South Korea</a:documentation>
+            <value>KW</value>
+            <a:documentation>Kuwait</a:documentation>
+            <value>KY</value>
+            <a:documentation>Cayman Islands</a:documentation>
+            <value>KZ</value>
+            <a:documentation>Kazakhstan</a:documentation>
+            <value>LB</value>
+            <a:documentation>Lebanon</a:documentation>
+            <value>LC</value>
+            <a:documentation>Saint Lucia</a:documentation>
+            <value>LD</value>
+            <a:documentation>Scotland</a:documentation>
+            <value>LI</value>
+            <a:documentation>Liechtenstein</a:documentation>
+            <value>LR</value>
+            <a:documentation>Liberia</a:documentation>
+            <value>LS</value>
+            <a:documentation>Lesotho</a:documentation>
+            <value>LT</value>
+            <a:documentation>Lituania</a:documentation>
+            <value>LU</value>
+            <a:documentation>Luxembourg</a:documentation>
+            <value>LV</value>
+            <a:documentation>Latvia</a:documentation>
+            <value>LY</value>
+            <a:documentation>Libyan Arab Jamahiriya</a:documentation>
+            <value>MA</value>
+            <a:documentation>Morocco</a:documentation>
+            <value>MC</value>
+            <a:documentation>Monaco</a:documentation>
+            <value>MD</value>
+            <a:documentation>Moldova</a:documentation>
+            <value>MG</value>
+            <a:documentation>Madagascar</a:documentation>
+            <value>MH</value>
+            <a:documentation>Marshall Islands</a:documentation>
+            <value>MK</value>
+            <a:documentation>Macedonia</a:documentation>
+            <value>ML</value>
+            <a:documentation>Mali</a:documentation>
+            <value>MM</value>
+            <a:documentation>Myanmar</a:documentation>
+            <value>MN</value>
+            <a:documentation>Mongolia</a:documentation>
+            <value>MO</value>
+            <a:documentation>Macau</a:documentation>
+            <value>MP</value>
+            <a:documentation>Northern Mariana Islands</a:documentation>
+            <value>MQ</value>
+            <a:documentation>Martinique</a:documentation>
+            <value>MR</value>
+            <a:documentation>Mauritania</a:documentation>
+            <value>MT</value>
+            <a:documentation>Malta</a:documentation>
+            <value>MU</value>
+            <a:documentation>Mauritius</a:documentation>
+            <value>MV</value>
+            <a:documentation>Maldives</a:documentation>
+            <value>MW</value>
+            <a:documentation>Malawi</a:documentation>
+            <value>MX</value>
+            <a:documentation>Mexico</a:documentation>
+            <value>MY</value>
+            <a:documentation>Malaysia</a:documentation>
+            <value>MZ</value>
+            <a:documentation>Mozambique</a:documentation>
+            <value>NA</value>
+            <a:documentation>Nambia</a:documentation>
+            <value>NC</value>
+            <a:documentation>New Caledonia</a:documentation>
+            <value>ND</value>
+            <a:documentation>Northern Ireland</a:documentation>
+            <value>NE</value>
+            <a:documentation>Niger</a:documentation>
+            <value>NF</value>
+            <a:documentation>Norfolk Island</a:documentation>
+            <value>NG</value>
+            <a:documentation>Nigeria</a:documentation>
+            <value>NI</value>
+            <a:documentation>Nicaragua</a:documentation>
+            <value>NL</value>
+            <a:documentation>Netherlands</a:documentation>
+            <value>NO</value>
+            <a:documentation>Norway</a:documentation>
+            <value>NP</value>
+            <a:documentation>Nepal</a:documentation>
+            <value>NR</value>
+            <a:documentation>Nauru</a:documentation>
+            <value>NU</value>
+            <a:documentation>Niue</a:documentation>
+            <value>NX</value>
+            <a:documentation>North America</a:documentation>
+            <value>NZ</value>
+            <a:documentation>New Zealand</a:documentation>
+            <value>OC</value>
+            <a:documentation>Oceania</a:documentation>
+            <value>OM</value>
+            <a:documentation>Oman</a:documentation>
+            <value>PA</value>
+            <a:documentation>Panama</a:documentation>
+            <value>PE</value>
+            <a:documentation>Peru</a:documentation>
+            <value>PF</value>
+            <a:documentation>French Polynesia</a:documentation>
+            <value>PG</value>
+            <a:documentation>Papau New Guinea</a:documentation>
+            <value>PH</value>
+            <a:documentation>Philippines</a:documentation>
+            <value>PK</value>
+            <a:documentation>Pakistan</a:documentation>
+            <value>PL</value>
+            <a:documentation>Poland</a:documentation>
+            <value>PM</value>
+            <a:documentation>Saint Pierre &amp; Miquelon</a:documentation>
+            <value>PN</value>
+            <a:documentation>Pitcairn</a:documentation>
+            <value>PR</value>
+            <a:documentation>Puerto Rico</a:documentation>
+            <value>PT</value>
+            <a:documentation>Portugal</a:documentation>
+            <value>PW</value>
+            <a:documentation>Palau</a:documentation>
+            <value>PY</value>
+            <a:documentation>Paraguay</a:documentation>
+            <value>QA</value>
+            <a:documentation>Qatar</a:documentation>
+            <value>RO</value>
+            <a:documentation>Romania</a:documentation>
+            <value>RU</value>
+            <a:documentation>Russian Federation</a:documentation>
+            <value>RW</value>
+            <a:documentation>Rwanda</a:documentation>
+            <value>SA</value>
+            <a:documentation>Saudi Arabia</a:documentation>
+            <value>SB</value>
+            <a:documentation>Solomon Islands</a:documentation>
+            <value>SC</value>
+            <a:documentation>Seychelles</a:documentation>
+            <value>SE</value>
+            <a:documentation>Sweden</a:documentation>
+            <value>SG</value>
+            <a:documentation>Singapore</a:documentation>
+            <value>SH</value>
+            <a:documentation>Saint Helena</a:documentation>
+            <value>SI</value>
+            <a:documentation>Slovenia</a:documentation>
+            <value>SK</value>
+            <a:documentation>Slovakia</a:documentation>
+            <value>SL</value>
+            <a:documentation>Sierra Leone</a:documentation>
+            <value>SM</value>
+            <a:documentation>San Marino</a:documentation>
+            <value>SN</value>
+            <a:documentation>Senegal</a:documentation>
+            <value>SO</value>
+            <a:documentation>Somalia</a:documentation>
+            <value>ST</value>
+            <a:documentation>Sao Tome &amp; Principle</a:documentation>
+            <value>SV</value>
+            <a:documentation>El Salvador</a:documentation>
+            <value>SX</value>
+            <a:documentation>South America</a:documentation>
+            <value>TC</value>
+            <a:documentation>Turks &amp; Caicos Islands</a:documentation>
+            <value>TF</value>
+            <a:documentation>French Southern Territories</a:documentation>
+            <value>TM</value>
+            <a:documentation>Turkmenistan</a:documentation>
+            <value>TN</value>
+            <a:documentation>Tunisia</a:documentation>
+            <value>TP</value>
+            <a:documentation>East Timor</a:documentation>
+            <value>TR</value>
+            <a:documentation>Turkey</a:documentation>
+            <value>TV</value>
+            <a:documentation>Tuvalu</a:documentation>
+            <value>UA</value>
+            <a:documentation>Ukraine</a:documentation>
+            <value>UG</value>
+            <a:documentation>Uganda</a:documentation>
+            <value>UK</value>
+            <a:documentation>United Kingdom</a:documentation>
+            <value>US</value>
+            <a:documentation>United States</a:documentation>
+            <value>UY</value>
+            <a:documentation>Uruguay</a:documentation>
+            <value>UZ</value>
+            <a:documentation>Uzbekistan</a:documentation>
+            <value>VC</value>
+            <a:documentation>Saint Vincent &amp; the Grenadin</a:documentation>
+            <value>VE</value>
+            <a:documentation>Venezuela</a:documentation>
+            <value>VG</value>
+            <a:documentation>Virgin Islands (British)</a:documentation>
+            <value>VI</value>
+            <a:documentation>Virgin Islands (U.S.)</a:documentation>
+            <value>VN</value>
+            <a:documentation>Vietnam</a:documentation>
+            <value>VR</value>
+            <a:documentation>Virtutopia</a:documentation>
+            <value>VU</value>
+            <a:documentation>Vanuatu</a:documentation>
+            <value>WA</value>
+            <a:documentation>Wales</a:documentation>
+            <value>WF</value>
+            <a:documentation>Wallis &amp; Futuna Islands</a:documentation>
+            <value>WO</value>
+            <a:documentation>World</a:documentation>
+            <value>WS</value>
+            <a:documentation>Samoa</a:documentation>
+            <value>XX</value>
+            <a:documentation>Unknown</a:documentation>
+            <value>YE</value>
+            <a:documentation>Yemen</a:documentation>
+            <value>YT</value>
+            <a:documentation>Mayotte</a:documentation>
+            <value>YU</value>
+            <a:documentation>Yugoslavia</a:documentation>
+            <value>ZA</value>
+            <a:documentation>South Africa</a:documentation>
+            <value>ZM</value>
+            <a:documentation>Zambia</a:documentation>
+            <value>ZR</value>
+            <a:documentation>Zaire</a:documentation>
+            <value>ZW</value>
+            <a:documentation>Zimbabwe</a:documentation>
+        </choice>
+    </define>
+</grammar>

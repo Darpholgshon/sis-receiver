@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    
+    Cashiers' Page Schema definition (mnemonic CP)
+    John Watson                                   
+    22/04/2004                                    
+    
+    
+    Version 1.0.1  11/02/2005.  Support non-runner content in events.  Add soure and book attributes to data content.
+    Version 1.0.2  21/03/2005.  Add optional refresh and antePost attributes to data content.
+    
+-->
+<!-- this is the namespace for horse and greyhound racing -->
+<grammar ns="http://www.satelliteinfo.co.uk/feed/master/hrdg" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <include href="commonattrib.rng"/>
+    <include href="category.rng"/>
+    <include href="country.rng"/>
+    <include href="eventclass.rng"/>
+    <include href="feedsource.rng"/>
+    <start>
+        <element name="data">
+            <ref name="data-content"/>
+        </element>
+    </start>
+    <!--
+        the root element is always named 'data' 
+        within the target namespace (the default namespace)
+    -->
+    <define name="data-content">
+        <ref name="common-root-attributes"/>
+        <attribute name="mnem">
+            <value>CP</value>
+        </attribute>
+        <attribute name="name">
+            <value>cashiers_page</value>
+        </attribute>
+        <attribute name="timeCheck">
+            <value>N</value>
+        </attribute>
+        <zeroOrMore>
+            <element name="meeting">
+                <ref name="meeting-content"/>
+            </element>
+        </zeroOrMore>
+    </define>
+    <!-- a meeting -->
+    <define name="meeting-content">
+        <attribute name="category">
+            <ref name="category-enumeration"/>
+        </attribute>
+        <attribute name="name"/>
+        <attribute name="code"/>
+        <attribute name="country">
+            <ref name="country-enumeration"/>
+        </attribute>
+        <attribute name="date">
+            <data type="date"/>
+        </attribute>
+        <optional>
+            <attribute name="priority">
+                <data type="integer"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="coverageCode"/>
+        </optional>
+        <optional>
+            <attribute name="going"/>
+        </optional>
+        <optional>
+            <attribute name="status"/>
+        </optional>
+        <zeroOrMore>
+            <element name="event">
+                <ref name="event-content"/>
+            </element>
+        </zeroOrMore>
+    </define>
+    <!-- a race -->
+    <define name="event-content">
+        <attribute name="id">
+            <data type="integer"/>
+        </attribute>
+        <attribute name="name"/>
+        <attribute name="num">
+            <data type="integer"/>
+        </attribute>
+        <attribute name="time">
+            <data type="time"/>
+        </attribute>
+        <optional>
+            <attribute name="distance"/>
+        </optional>
+        <optional>
+            <attribute name="pmsg"/>
+        </optional>
+        <optional>
+            <attribute name="progressCode"/>
+        </optional>
+        <optional>
+            <attribute name="going"/>
+        </optional>
+        <optional>
+            <attribute name="offTime">
+                <data type="time"/>
+            </attribute>
+        </optional>
+        <optional>
+            <element name="nonrunner">
+                <ref name="nonrunner-content"/>
+            </element>
+        </optional>
+        <zeroOrMore>
+            <element name="selection">
+                <ref name="selection-content"/>
+            </element>
+        </zeroOrMore>
+    </define>
+    <!-- list of non-runners -->
+    <define name="nonrunner-content">
+        <zeroOrMore>
+            <element name="selection">
+                <ref name="nonselection-content"/>
+            </element>
+        </zeroOrMore>
+    </define>
+    <!-- a runner -->
+    <define name="selection-content">
+        <attribute name="id">
+            <data type="integer"/>
+        </attribute>
+        <attribute name="name"/>
+        <attribute name="runnernumber">
+            <data type="integer"/>
+        </attribute>
+        <attribute name="dec">
+            <data type="decimal"/>
+        </attribute>
+        <attribute name="fract"/>
+        <attribute name="status"/>
+        <optional>
+            <attribute name="jockey"/>
+        </optional>
+        <optional>
+            <attribute name="reservename"/>
+        </optional>
+    </define>
+    <!-- a (non) runner -->
+    <define name="nonselection-content">
+        <attribute name="id">
+            <data type="integer"/>
+        </attribute>
+        <attribute name="name"/>
+        <attribute name="num">
+            <data type="integer"/>
+        </attribute>
+        <attribute name="status"/>
+        <optional>
+            <attribute name="jockey"/>
+        </optional>
+        <optional>
+            <attribute name="reservename"/>
+        </optional>
+    </define>
+</grammar>

@@ -1,0 +1,411 @@
+----------------------------------START FFST------------------------------------
+C:\Documents and Settings\stevenr\Workspaces\MyEclipse\SIS Receiver\FFDC\JMSCC0002.FDC PID:13176
+
+                                    FDCTitle
+                                            
+
+Product          :- IBM WebSphere MQ classes for JMS
+Date/Time        :- Thu Feb 10 12:48:18 GMT 2011
+System time      :- 1297342098674
+Operating System :- Windows XP
+UserID           :- stevenr
+Java Vendor      :- Sun Microsystems Inc.
+Java Version     :- 14.2-b01
+
+Source Class     :- com.ibm.mq.jms.MQQueueConnectionFactory
+Source Method    :- readObject()
+ProbeID          :- XF001003
+Thread           :- name=main priority=5 group=main ccl=sun.misc.Launcher$AppClassLoader@11b86e7
+
+                                      Data
+                                      ----
+
+Data        :- none
+
+                              Version information
+                              -------------------
+
+Java Message Service Client
+7.0.0.1
+k700-001-081204
+Production
+
+WebSphere MQ classes for Java Message Service
+7.0.0.1
+k700-001-081204
+Production
+
+IBM WebSphere MQ
+7.0.0.1
+k700-001-081204
+Production
+
+Common Services for Java Platform, Standard Edition
+1.0.0.1
+k700-001-081204
+Production
+
+
+
+                                  Stack trace
+                                  -----------
+
+Stack trace to show the location of the FFST call
+|   FFST Location  :-  java.lang.Exception
+|   	at com.ibm.msg.client.commonservices.trace.Trace.getCurrentPosition(Trace.java:1667)
+|   	at com.ibm.msg.client.commonservices.trace.Trace.createFFSTString(Trace.java:1606)
+|   	at com.ibm.msg.client.commonservices.trace.Trace.ffstInternal(Trace.java:1489)
+|   	at com.ibm.msg.client.commonservices.trace.Trace.ffst(Trace.java:1348)
+|   	at com.ibm.mq.jms.MQConnectionFactory.initialiseMQConnectionFactory(MQConnectionFactory.java:3257)
+|   	at com.ibm.mq.jms.MQConnectionFactory.<init>(MQConnectionFactory.java:234)
+|   	at com.ibm.mq.jms.MQQueueConnectionFactory.<init>(MQQueueConnectionFactory.java:76)
+|   	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+|   	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+|   	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+|   	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+|   	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:126)
+|   	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:74)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:958)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:911)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+|   	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+|   	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+|   	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+|   	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+|   	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+|   	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1325)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1086)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+|   	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+|   	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+|   	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+|   	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+|   	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+|   	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1325)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1086)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+|   	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+|   	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+|   	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+|   	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+|   	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+|   	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+|   	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+|   	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+|   	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+|   	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+|   	at org.apache.camel.spring.Main.createDefaultApplicationContext(Main.java:185)
+|   	at org.apache.camel.spring.Main.doStart(Main.java:139)
+|   	at org.apache.camel.impl.ServiceSupport.start(ServiceSupport.java:65)
+|   	at org.apache.camel.impl.ServiceSupport.start(ServiceSupport.java:52)
+|   	at org.apache.camel.impl.MainSupport.run(MainSupport.java:136)
+|   	at org.apache.camel.impl.MainSupport.run(MainSupport.java:322)
+|   	at com.phobos.alchemy.AlchemyEngine.main(AlchemyEngine.java:27)
+|   
+
+                            Property Store Contents
+                            -----------------------
+
+All currently set properties
+|   awt.toolkit                    :-  sun.awt.windows.WToolkit
+|   file.encoding                  :-  Cp1252
+|   file.encoding.pkg              :-  sun.io
+|   file.separator                 :-  \
+|   java.awt.graphicsenv           :-  sun.awt.Win32GraphicsEnvironment
+|   java.awt.printerjob            :-  sun.awt.windows.WPrinterJob
+|   java.class.path                :-  C:\Documents and Settings\stevenr\Workspaces\MyEclipse\SIS Receiver\target\classes;C:\Documents and Settings\stevenr\Workspaces\MyEclipse\SIS Receiver\lib\com.ibm.mq.jmqi.jar;C:\Documents and Settings\stevenr\Workspaces\MyEclipse\SIS Receiver\lib\com.ibm.mqjms.jar;C:\Documents and Settings\stevenr\.m2\repository\org\apache\camel\camel-core\2.6.0\camel-core-2.6.0.jar;C:\Documents and Settings\stevenr\.m2\repository\commons-logging\commons-logging-api\1.1\commons-logging-api-1.1.jar;C:\Documents and Settings\stevenr\.m2\repository\org\fusesource\commonman\commons-management\1.0\commons-management-1.0.jar;C:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\lib\tools.jar;C:\Documents and Settings\stevenr\.m2\repository\org\apache\camel\camel-spring\2.6.0\camel-spring-2.6.0.jar;C:\Documents and Settings\stevenr\.m2\repository\org\springframework\spring-context\3.0.5.RELEASE\spring-context-3.0.5.RELEASE.jar;C:\Documents and Settings\stevenr\.m2\repository\org\springframework\spring-aop\3.0.5.RELEASE\spring-aop-3.0.5.RELEASE.jar;C:\Documents and Settings\stevenr\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Documents and Settings\stevenr\.m2\repository\org\springframework\spring-asm\3.0.5.RELEASE\spring-asm-3.0.5.RELEASE.jar;C:\Documents and Settings\stevenr\.m2\repository\org\springframework\spring-beans\3.0.5.RELEASE\spring-beans-3.0.5.RELEASE.jar;C:\Documents and Settings\stevenr\.m2\repository\org\springframework\spring-core\3.0.5.RELEASE\spring-core-3.0.5.RELEASE.jar;C:\Documents and Settings\stevenr\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Documents and Settings\stevenr\.m2\repository\org\springframework\spring-expression\3.0.5.RELEASE\spring-expression-3.0.5.RELEASE.jar;C:\Documents and Settings\stevenr\.m2\repository\org\springframework\spring-tx\3.0.5.RELEASE\spring-tx-3.0.5.RELEASE.jar;C:\Documents and Settings\stevenr\.m2\repository\org\apache\camel\camel-jaxb\2.6.0\camel-jaxb-2.6.0.jar;C:\Documents and Settings\stevenr\.m2\repository\javax\xml\bind\jaxb-api\2.1\jaxb-api-2.1.jar;C:\Documents and Settings\stevenr\.m2\repository\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar;C:\Documents and Settings\stevenr\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Documents and Settings\stevenr\.m2\repository\com\sun\xml\bind\jaxb-impl\2.1.13\jaxb-impl-2.1.13.jar;C:\Documents and Settings\stevenr\.m2\repository\org\apache\camel\camel-jms\2.6.0\camel-jms-2.6.0.jar;C:\Documents and Settings\stevenr\.m2\repository\org\springframework\spring-jms\3.0.5.RELEASE\spring-jms-3.0.5.RELEASE.jar;C:\Documents and Settings\stevenr\.m2\repository\org\apache\geronimo\specs\geronimo-jms_1.1_spec\1.1.1\geronimo-jms_1.1_spec-1.1.1.jar;C:\Documents and Settings\stevenr\.m2\repository\org\apache\camel\camel-http\2.6.0\camel-http-2.6.0.jar;C:\Documents and Settings\stevenr\.m2\repository\org\apache\geronimo\specs\geronimo-servlet_2.4_spec\1.1.1\geronimo-servlet_2.4_spec-1.1.1.jar;C:\Documents and Settings\stevenr\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;C:\Documents and Settings\stevenr\.m2\repository\commons-codec\commons-codec\1.2\commons-codec-1.2.jar
+|   java.class.version             :-  50.0
+|   java.endorsed.dirs             :-  C:\Program Files\Java\jdk1.6.0_16\jre\lib\endorsed
+|   java.ext.dirs                  :-  C:\Program Files\Java\jdk1.6.0_16\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+|   java.home                      :-  C:\Program Files\Java\jdk1.6.0_16\jre
+|   java.io.tmpdir                 :-  C:\DOCUME~1\stevenr\LOCALS~1\Temp\
+|   java.library.path              :-  C:\Program Files\Java\jdk1.6.0_16\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin/client;C:/Program Files/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin;C:\Program Files\IBM\WebSphere MQ\Java\lib;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\WINDOWS\system32\WindowsPowerShell\v1.0;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Java\jdk1.6.0_16\bin;C:\ant\bin;C:\Program Files\IBM\WebSphere MQ\bin;C:\Program Files\IBM\WebSphere MQ\tools\c\samples\bin;C:\Program Files\apache-maven-2.2.1\bin;C:\android-sdk-windows\tools;C:\Program Files\QuickTime\QTSystem\;C:\apache-maven-2.2.1\bin;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Program Files\CVSNT\
+|   java.runtime.name              :-  Java(TM) SE Runtime Environment
+|   java.runtime.version           :-  1.6.0_16-b01
+|   java.specification.name        :-  Java Platform API Specification
+|   java.specification.vendor      :-  Sun Microsystems Inc.
+|   java.specification.version     :-  1.6
+|   java.vendor                    :-  Sun Microsystems Inc.
+|   java.vendor.url                :-  http://java.sun.com/
+|   java.vendor.url.bug            :-  http://java.sun.com/cgi-bin/bugreport.cgi
+|   java.version                   :-  1.6.0_16
+|   java.vm.info                   :-  mixed mode, sharing
+|   java.vm.name                   :-  Java HotSpot(TM) Client VM
+|   java.vm.specification.name     :-  Java Virtual Machine Specification
+|   java.vm.specification.vendor   :-  Sun Microsystems Inc.
+|   java.vm.specification.version  :-  1.0
+|   java.vm.vendor                 :-  Sun Microsystems Inc.
+|   java.vm.version                :-  14.2-b01
+|   line.separator                 :-  
+|   
+|   os.arch                        :-  x86
+|   os.name                        :-  Windows XP
+|   os.version                     :-  5.1
+|   path.separator                 :-  ;
+|   sun.arch.data.model            :-  32
+|   sun.boot.class.path            :-  C:\Program Files\Java\jdk1.6.0_16\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_16\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_16\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_16\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_16\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_16\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_16\jre\classes
+|   sun.boot.library.path          :-  C:\Program Files\Java\jdk1.6.0_16\jre\bin
+|   sun.cpu.endian                 :-  little
+|   sun.cpu.isalist                :-  pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86
+|   sun.desktop                    :-  windows
+|   sun.io.unicode.encoding        :-  UnicodeLittle
+|   sun.java.launcher              :-  SUN_STANDARD
+|   sun.jnu.encoding               :-  Cp1252
+|   sun.management.compiler        :-  HotSpot Client Compiler
+|   sun.os.patch.level             :-  Service Pack 3
+|   user.country                   :-  GB
+|   user.dir                       :-  C:\Documents and Settings\stevenr\Workspaces\MyEclipse\SIS Receiver
+|   user.home                      :-  C:\Documents and Settings\stevenr
+|   user.language                  :-  en
+|   user.name                      :-  stevenr
+|   user.timezone                  :-  Europe/London
+|   user.variant                   :-  
+
+                           WorkQueueMananger Contents
+                           --------------------------
+
+|   Current ThreadPool size      :-  0
+|   Maintain ThreadPool size     :-  false
+|   Maximum ThreadPool size      :-  -1
+|   ThreadPool inactive timeout  :-  0
+
+                               Runtime properties
+                               ------------------
+
+|   Available processors         :-  2
+|   Free memory in bytes (now)   :-  2222808
+|   Max memory in bytes          :-  66650112
+|   Total memory in bytes (now)  :-  5177344
+
+                           Component Manager Contents
+                           --------------------------
+
+Common Services Components:
+|   CMVC               :-  k700-001-081204
+|   Class Name         :-  class com.ibm.msg.client.commonservices.j2se.J2SEComponent
+|   Component Name     :-  com.ibm.msg.client.commonservices.j2se
+|   Component Title    :-  Common Services for Java Platform, Standard Edition
+|   Factory Class      :-  class com.ibm.msg.client.commonservices.j2se.CommonServicesImplementation
+|   Version            :-  1.0.0.1
+|   inPreferenceTo[0]  :-  com.ibm.msg.client.commonservices.j2me
+
+Messaging Provider Components:
+|   CMVC             :-  k700-001-081204
+|   Class Name       :-  class com.ibm.msg.client.wmq.factories.WMQComponent
+|   Component Name   :-  com.ibm.msg.client.wmq
+|   Component Title  :-  IBM WebSphere MQ
+|   Factory Class    :-  class com.ibm.msg.client.wmq.factories.WMQFactoryFactory
+|   Version          :-  7.0.0.1
+|   mqjbnd level     :-  k000-L090724
+
+
+
+                             FFST Object Properties
+                             ----------------------
+
+All currently set properties
+|   XMSC_ASYNC_EXCEPTIONS             :-  -1
+|   XMSC_CLIENT_ID                    :-  <null>
+|   XMSC_CONNECTION_TYPE              :-  1
+|   XMSC_CONNECTION_TYPE_NAME         :-  com.ibm.msg.client.wmq
+|   XMSC_RTT_DIRECT_AUTH              :-  0
+|   XMSC_RTT_PROXY_HOSTNAME           :-  <null>
+|   XMSC_RTT_PROXY_PORT               :-  443
+|   XMSC_WMQ_BROKER_CC_SUBQ           :-  SYSTEM.JMS.ND.CC.SUBSCRIBER.QUEUE
+|   XMSC_WMQ_BROKER_CONTROLQ          :-  SYSTEM.BROKER.CONTROL.QUEUE
+|   XMSC_WMQ_BROKER_PUBQ              :-  SYSTEM.BROKER.DEFAULT.STREAM
+|   XMSC_WMQ_BROKER_QMGR              :-  
+|   XMSC_WMQ_BROKER_SUBQ              :-  SYSTEM.JMS.ND.SUBSCRIBER.QUEUE
+|   XMSC_WMQ_CCDTURL                  :-  <null>
+|   XMSC_WMQ_CF_DESCRIPTION           :-  <null>
+|   XMSC_WMQ_CHANNEL                  :-  SYSTEM.DEF.SVRCONN
+|   XMSC_WMQ_CLEANUP_INTERVAL         :-  3600000
+|   XMSC_WMQ_CLEANUP_LEVEL            :-  1
+|   XMSC_WMQ_CLONE_SUPPORT            :-  0
+|   XMSC_WMQ_CONNECTION_MODE          :-  0
+|   XMSC_WMQ_CONNECTION_TAG           :-  [B@1e55794
+|   XMSC_WMQ_CONNECT_OPTIONS          :-  0
+|   XMSC_WMQ_HEADER_COMP              :-  [0]
+|   XMSC_WMQ_HOST_NAME                :-  localhost
+|   XMSC_WMQ_LOCAL_ADDRESS            :-  
+|   XMSC_WMQ_MAP_NAME_STYLE           :-  true
+|   XMSC_WMQ_MAX_BUFFER_SIZE          :-  1000
+|   XMSC_WMQ_MESSAGE_RETENTION        :-  1
+|   XMSC_WMQ_MESSAGE_SELECTION        :-  0
+|   XMSC_WMQ_MSG_BATCH_SIZE           :-  10
+|   XMSC_WMQ_MSG_COMP                 :-  [0]
+|   XMSC_WMQ_OPT_PUB                  :-  false
+|   XMSC_WMQ_OUTCOME_NOTIFICATION     :-  true
+|   XMSC_WMQ_POLLING_INTERVAL         :-  5000
+|   XMSC_WMQ_PORT                     :-  1414
+|   XMSC_WMQ_PROCESS_DURATION         :-  0
+|   XMSC_WMQ_PROVIDER_VERSION         :-  unspecified
+|   XMSC_WMQ_PUB_ACK_INTERVAL         :-  25
+|   XMSC_WMQ_QMGR_CCSID               :-  819
+|   XMSC_WMQ_QUEUE_MANAGER            :-  
+|   XMSC_WMQ_RECEIVE_EXIT             :-  <null>
+|   XMSC_WMQ_RECEIVE_EXIT_INIT        :-  <null>
+|   XMSC_WMQ_RECEIVE_ISOLATION        :-  0
+|   XMSC_WMQ_RESCAN_INTERVAL          :-  5000
+|   XMSC_WMQ_SECURITY_EXIT            :-  <null>
+|   XMSC_WMQ_SECURITY_EXIT_INIT       :-  <null>
+|   XMSC_WMQ_SEND_CHECK_COUNT         :-  0
+|   XMSC_WMQ_SEND_EXIT                :-  <null>
+|   XMSC_WMQ_SEND_EXIT_INIT           :-  <null>
+|   XMSC_WMQ_SHARE_CONV_ALLOWED       :-  1
+|   XMSC_WMQ_SPARSE_SUBSCRIPTIONS     :-  false
+|   XMSC_WMQ_SSL_CERT_STORES_COL      :-  <null>
+|   XMSC_WMQ_SSL_CERT_STORES_STR      :-  <null>
+|   XMSC_WMQ_SSL_CIPHER_SUITE         :-  <null>
+|   XMSC_WMQ_SSL_FIPS_REQUIRED        :-  false
+|   XMSC_WMQ_SSL_KEY_RESETCOUNT       :-  0
+|   XMSC_WMQ_SSL_PEER_NAME            :-  <null>
+|   XMSC_WMQ_SSL_SOCKET_FACTORY       :-  <null>
+|   XMSC_WMQ_STATUS_REFRESH_INTERVAL  :-  60000
+|   XMSC_WMQ_SUBSCRIPTION_STORE       :-  1
+|   XMSC_WMQ_SYNCPOINT_ALL_GETS       :-  false
+|   XMSC_WMQ_TARGET_CLIENT_MATCHING   :-  true
+|   XMSC_WMQ_TEMPORARY_MODEL          :-  SYSTEM.DEFAULT.MODEL.QUEUE
+|   XMSC_WMQ_TEMP_Q_PREFIX            :-  
+|   XMSC_WMQ_TEMP_TOPIC_PREFIX        :-  
+|   XMSC_WMQ_USE_CONNECTION_POOLING   :-  true
+|   brokerVersion                     :-  -1
+|   failIfQuiesce                     :-  1
+|   multicast                         :-  0
+|   version                           :-  7
+|   wildcardFormat                    :-  0
+
+                         Provider Specific Information
+                         -----------------------------
+
+Overview of JMS System
+Num. Connections : 0
+Num. Sessions    : 0
+Num. Consumers   : 0
+Num. Producers   : 0
+
+Detailed JMS System Information
+Connections      : 
+Sessions         : 
+Consumers        : 
+Producers        : 
+
+All Thread Information
+
+                          Name : Signal Dispatcher
+                      Priority : 9
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 4
+                         State : RUNNABLE
+
+                          Name : JMSCCThreadPoolMaster
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 10
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:485)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$WorkQueueManagerThread.waitForNotification(WorkQueueManagerImplementation.java:651)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$WorkQueueManagerThread.waitForNotification(WorkQueueManagerImplementation.java:621)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$WorkQueueManagerThread.run(WorkQueueManagerImplementation.java:887)
+
+                          Name : main
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 1
+                         State : RUNNABLE
+                         Stack : java.lang.Thread.dumpThreads(Thread.java:-2)
+                               : java.lang.Thread.getAllStackTraces(Thread.java:1487)
+                               : sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+                               : sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+                               : sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+                               : java.lang.reflect.Method.invoke(Method.java:597)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.getAllThreads(DefaultTracer.java:1418)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.generateThreadInfo(DefaultTracer.java:1239)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.access$1200(DefaultTracer.java:136)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer$7.run(DefaultTracer.java:1192)
+                               : java.security.AccessController.doPrivileged(AccessController.java:-2)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.ffst(DefaultTracer.java:1129)
+                               : com.ibm.msg.client.commonservices.trace.Trace.ffstInternal(Trace.java:1494)
+                               : com.ibm.msg.client.commonservices.trace.Trace.ffst(Trace.java:1348)
+                               : com.ibm.mq.jms.MQConnectionFactory.initialiseMQConnectionFactory(MQConnectionFactory.java:3257)
+                               : com.ibm.mq.jms.MQConnectionFactory.<init>(MQConnectionFactory.java:234)
+                               : com.ibm.mq.jms.MQQueueConnectionFactory.<init>(MQQueueConnectionFactory.java:76)
+                               : sun.reflect.NativeConstructorAccessorImpl.newInstance0(NativeConstructorAccessorImpl.java:-2)
+                               : sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+                               : sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+                               : java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+                               : org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:126)
+                               : org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:74)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:958)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:911)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+                               : org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+                               : org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+                               : org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+                               : org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+                               : org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+                               : org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1325)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1086)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+                               : org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+                               : org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+                               : org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+                               : org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+                               : org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+                               : org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1325)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1086)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+                               : org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+                               : org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291)
+                               : org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+                               : org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288)
+                               : org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190)
+                               : org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580)
+                               : org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+                               : org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+                               : org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+                               : org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+                               : org.apache.camel.spring.Main.createDefaultApplicationContext(Main.java:185)
+                               : org.apache.camel.spring.Main.doStart(Main.java:139)
+                               : org.apache.camel.impl.ServiceSupport.start(ServiceSupport.java:65)
+                               : org.apache.camel.impl.ServiceSupport.start(ServiceSupport.java:52)
+                               : org.apache.camel.impl.MainSupport.run(MainSupport.java:136)
+                               : org.apache.camel.impl.MainSupport.run(MainSupport.java:322)
+                               : com.phobos.alchemy.AlchemyEngine.main(AlchemyEngine.java:27)
+
+                          Name : Finalizer
+                      Priority : 8
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 3
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+                               : java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+                          Name : Reference Handler
+                      Priority : 10
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 2
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:485)
+                               : java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+
+                          Name : Attach Listener
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 5
+                         State : RUNNABLE
+
+First Failure Symptom Report completed at Thu Feb 10 12:48:18 GMT 2011
+------------------------------------END FFST------------------------------------

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.satelliteinfo.co.uk/feed/master/hrdg" xmlns:target="http://www.satelliteinfo.co.uk/feed/master/hrdg">
+  <xs:import schemaLocation="commonattrib.xsd"/>
+  <xs:simpleType name="feedsource-enumeration">
+    <xs:annotation>
+      <xs:documentation>Names of sources of the data feed</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="sportsData">
+        <xs:annotation>
+          <xs:documentation>Sports Data (from the SD database)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sportsDataSilks">
+        <xs:annotation>
+          <xs:documentation>Sports Data Jockey Silks</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="virtualRacing">
+        <xs:annotation>
+          <xs:documentation>Virtual Racing (directly from Red Vision)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ladbrokesExtra">
+        <xs:annotation>
+          <xs:documentation>Ladbrokes Extra dedicated channel (temporary name)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

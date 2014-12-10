@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <!--
+        common attributes that occur on the root data element of all XUP master documents
+        
+         
+        Version 1.0.1  21/1/2005.  Added the 'route' attribute
+        
+         type       always 'master' for XUP master or refresh documents 
+         id         the document name (masters and refreshes) or target document name(s) (increments)
+         source     the source of the data (e.g. sportsData, betEditPub, betEditSub)
+         category   the sport categroy code (or codes)
+         version    the feed version
+         date       the start date where the master defines a particular sporting event, otherwise the feed generation date
+         book       mnemonic representing the feed source
+         group      (BetEdit messages only) the BetEdit bookmaker group code who supplies the data
+         timestamp  time the document was generated (milliseconds since midnight, January 1, 1970 UTC)
+         lastUpdate time the document was last updated (milliseconds since midnight, January 1, 1970 UTC)
+         expiry     hint to client systems of the date and time when the document may be safely removed or archived
+         refresh    'yes' if this master is a refresh (with increments applied), absent otherwise
+         antePost   'yes' if any BetEdit increment has been applied to the document, absent otherwise
+         route      for internal use by SIS.  Used in document routing
+    -->
+    <define name="common-root-attributes">
+        <attribute name="type">
+            <value>master</value>
+        </attribute>
+        <attribute name="id"/>
+        <attribute name="source">
+            <ref name="feedsource-enumeration"/>
+        </attribute>
+        <attribute name="category">
+            <ref name="category-enumeration"/>
+        </attribute>
+        <attribute name="version"/>
+        <attribute name="date">
+            <data type="date"/>
+        </attribute>
+        <optional>
+            <attribute name="book"/>
+        </optional>
+        <optional>
+            <attribute name="group"/>
+        </optional>
+        <optional>
+            <attribute name="timestamp">
+                <data type="integer"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="lastUpdate">
+                <data type="integer"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="expiry">
+                <data type="dateTime"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="refresh">
+                <value>yes</value>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="antePost">
+                <value>yes</value>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="route"/>
+        </optional>
+    </define>
+</grammar>

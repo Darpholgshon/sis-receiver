@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0">
+    <define name="category-enumeration">
+        <a:documentation>A sports category. This defines the major sports in which SIS is interested</a:documentation>
+        <choice>
+            <value>AT</value>
+            <a:documentation>Athletics</a:documentation>
+            <value>BX</value>
+            <a:documentation>Boxing</a:documentation>
+            <value>CK</value>
+            <a:documentation>Cricket</a:documentation>
+            <value>DG</value>
+            <a:documentation>Greyhounds</a:documentation>
+            <value>FB</value>
+            <a:documentation>Football</a:documentation>
+            <value>GF</value>
+            <a:documentation>Golf</a:documentation>
+            <value>HR</value>
+            <a:documentation>Horse Racing</a:documentation>
+            <value>NB</value>
+            <a:documentation>Numbers</a:documentation>
+            <value>RL</value>
+            <a:documentation>Rugby League</a:documentation>
+            <value>RU</value>
+            <a:documentation>Rugby Union</a:documentation>
+            <value>SK</value>
+            <a:documentation>Snooker</a:documentation>
+            <value>TN</value>
+            <a:documentation>Tennis</a:documentation>
+            <value>MR</value>
+            <a:documentation>Motor Racing</a:documentation>
+            <value>HR,DG</value>
+            <a:documentation>Horse and Greyhound racing (only used in root)    </a:documentation>
+        </choice>
+    </define>
+</grammar>

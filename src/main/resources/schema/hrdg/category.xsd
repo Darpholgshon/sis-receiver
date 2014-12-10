@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.satelliteinfo.co.uk/feed/master/hrdg" xmlns:target="http://www.satelliteinfo.co.uk/feed/master/hrdg">
+  <xs:import schemaLocation="commonattrib.xsd"/>
+  <xs:simpleType name="category-enumeration">
+    <xs:annotation>
+      <xs:documentation>A sports category. This defines the major sports in which SIS is interested</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AT">
+        <xs:annotation>
+          <xs:documentation>Athletics</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BX">
+        <xs:annotation>
+          <xs:documentation>Boxing</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CK">
+        <xs:annotation>
+          <xs:documentation>Cricket</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DG">
+        <xs:annotation>
+          <xs:documentation>Greyhounds</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FB">
+        <xs:annotation>
+          <xs:documentation>Football</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GF">
+        <xs:annotation>
+          <xs:documentation>Golf</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HR">
+        <xs:annotation>
+          <xs:documentation>Horse Racing</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NB">
+        <xs:annotation>
+          <xs:documentation>Numbers</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RL">
+        <xs:annotation>
+          <xs:documentation>Rugby League</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RU">
+        <xs:annotation>
+          <xs:documentation>Rugby Union</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SK">
+        <xs:annotation>
+          <xs:documentation>Snooker</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TN">
+        <xs:annotation>
+          <xs:documentation>Tennis</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MR">
+        <xs:annotation>
+          <xs:documentation>Motor Racing</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HR,DG">
+        <xs:annotation>
+          <xs:documentation>Horse and Greyhound racing (only used in root)    </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

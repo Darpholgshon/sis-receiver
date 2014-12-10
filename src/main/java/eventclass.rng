@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0">
+    <define name="eventclass-enumeration">
+        <a:documentation>Bets on a meeting or match</a:documentation>
+        <choice>
+            <value>2E</value>
+            <a:documentation>2 ball event</a:documentation>
+            <value>3E</value>
+            <a:documentation>3 ball event</a:documentation>
+            <value>BN</value>
+            <a:documentation>Number of Bookings</a:documentation>
+            <value>CL</value>
+            <a:documentation>Colours</a:documentation>
+            <value>CS</value>
+            <a:documentation>Correct Score</a:documentation>
+            <value>EN</value>
+            <a:documentation>Even Numbers</a:documentation>
+            <value>FG</value>
+            <a:documentation>First Goal Scorer</a:documentation>
+            <value>LG</value>
+            <a:documentation>Last Goal Scorer</a:documentation>
+            <value>PS</value>
+            <a:documentation>Player to Score</a:documentation>
+            <value>FT</value>
+            <a:documentation>First Team to Score</a:documentation>
+            <value>TG</value>
+            <a:documentation>Time of 1st Goal</a:documentation>
+            <value>GB</value>
+            <a:documentation>Group Betting</a:documentation>
+            <value>GS</value>
+            <a:documentation>Top Goal Scorer</a:documentation>
+            <value>HF</value>
+            <a:documentation>Half Time / Full Time</a:documentation>
+            <value>HP</value>
+            <a:documentation>Highest Partnership </a:documentation>
+            <value>HR</value>
+            <a:documentation>Highest Run Scorer</a:documentation>
+            <value>LT</value>
+            <a:documentation>Last Try Scorer</a:documentation>
+            <value>LW</value>
+            <a:documentation>Leading Wicket Taker</a:documentation>
+            <value>MM</value>
+            <a:documentation>Man of the Match</a:documentation>
+            <value>NC</value>
+            <a:documentation>Number of Corners</a:documentation>
+            <value>NR</value>
+            <a:documentation>To win in nominated round</a:documentation>
+            <value>NW</value>
+            <a:documentation>Nationality of Winner</a:documentation>
+            <value>OM</value>
+            <a:documentation>Order of Merit</a:documentation>
+            <value>ON</value>
+            <a:documentation>Odd Numbers</a:documentation>
+            <value>OW</value>
+            <a:documentation>overall winner </a:documentation>
+            <value>R1</value>
+            <a:documentation>winner round 1 grouping </a:documentation>
+            <value>R2</value>
+            <a:documentation>winner round 2 grouping </a:documentation>
+            <value>R3</value>
+            <a:documentation>winner round 3 grouping </a:documentation>
+            <value>R4</value>
+            <a:documentation>winner round 4 grouping </a:documentation>
+            <value>SG</value>
+            <a:documentation>Time of 2nd Goal</a:documentation>
+            <value>SO</value>
+            <a:documentation>Number of Sending Offs</a:documentation>
+            <value>SP</value>
+            <a:documentation>First Scoring Play</a:documentation>
+            <value>SW</value>
+            <a:documentation>Strokes taken by Winner</a:documentation>
+            <value>TL</value>
+            <a:documentation>Time of Last Goal</a:documentation>
+            <value>TS</value>
+            <a:documentation>Number of tries scored</a:documentation>
+            <value>WM</value>
+            <a:documentation>Winning Margin</a:documentation>
+            <value>WS</value>
+            <a:documentation>Winning Score</a:documentation>
+        </choice>
+    </define>
+</grammar>

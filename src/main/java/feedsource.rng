@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0">
+    <define name="feedsource-enumeration">
+        <a:documentation>Names of sources of the data feed</a:documentation>
+        <choice>
+            <value>sportsData</value>
+            <a:documentation>Sports Data (from the SD database)</a:documentation>
+            <value>sportsDataSilks</value>
+            <a:documentation>Sports Data Jockey Silks</a:documentation>
+            <value>virtualRacing</value>
+            <a:documentation>Virtual Racing (directly from Red Vision)</a:documentation>
+            <value>ladbrokesExtra</value>
+            <a:documentation>Ladbrokes Extra dedicated channel (temporary name)</a:documentation>
+        </choice>
+    </define>
+</grammar>

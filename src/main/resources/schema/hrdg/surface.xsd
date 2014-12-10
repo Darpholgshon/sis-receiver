@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.satelliteinfo.co.uk/feed/master/hrdg" xmlns:target="http://www.satelliteinfo.co.uk/feed/master/hrdg">
+  <xs:import schemaLocation="commonattrib.xsd"/>
+  <xs:simpleType name="surface-enumeration">
+    <xs:annotation>
+      <xs:documentation>An indication of the type of race track or pitch surface.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="A">
+        <xs:annotation>
+          <xs:documentation>All Weather / Astroturf</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="C">
+        <xs:annotation>
+          <xs:documentation>Clay</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="D">
+        <xs:annotation>
+          <xs:documentation>Dirt</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="I">
+        <xs:annotation>
+          <xs:documentation>Indoor</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="L">
+        <xs:annotation>
+          <xs:documentation>Lawn</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="O">
+        <xs:annotation>
+          <xs:documentation>Outdoor</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="R">
+        <xs:annotation>
+          <xs:documentation>Race Circuit</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="S">
+        <xs:annotation>
+          <xs:documentation>Street Circuit</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="T">
+        <xs:annotation>
+          <xs:documentation>Turf</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="E">
+        <xs:annotation>
+          <xs:documentation>Oval Circuit</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="V">
+        <xs:annotation>
+          <xs:documentation>Various</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

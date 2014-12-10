@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.satelliteinfo.co.uk/feed/master/hrdg" xmlns:target="http://www.satelliteinfo.co.uk/feed/master/hrdg">
+  <xs:import schemaLocation="commonattrib.xsd"/>
+  <xs:simpleType name="bettype-enumeration">
+    <xs:annotation>
+      <xs:documentation>A single race bet type.  This includes all the betting pools that may operate on a single race result.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="N"/>
+      <xs:enumeration value="W">
+        <xs:annotation>
+          <xs:documentation>Tote Win Pool</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="P">
+        <xs:annotation>
+          <xs:documentation>Tote Place Pool</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="S">
+        <xs:annotation>
+          <xs:documentation>Tote Show Pools (foreign horse racing only)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="X">
+        <xs:annotation>
+          <xs:documentation>Tote Exacta (or Perfecta) Pool</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="I">
+        <xs:annotation>
+          <xs:documentation>Tote Trifecta Pool</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="C">
+        <xs:annotation>
+          <xs:documentation>Chart Forecast</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="F">
+        <xs:annotation>
+          <xs:documentation>Standard horse racing Forecast</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="T">
+        <xs:annotation>
+          <xs:documentation>Standard horse racing Tricast</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="J">
+        <xs:annotation>
+          <xs:documentation>BOLA greyhound Forecast</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="K">
+        <xs:annotation>
+          <xs:documentation>Non-BOLA greyhound Forecast</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="L">
+        <xs:annotation>
+          <xs:documentation>BOLA greyhound Tricast</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="M">
+        <xs:annotation>
+          <xs:documentation>Non-BOLA greyhound Tricast</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="D">
+        <xs:annotation>
+          <xs:documentation>Dual FC </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:documentation>Tierce </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="E">
+        <xs:annotation>
+          <xs:documentation>C.S.F</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:documentation>2 sur 4: 2 in first 4</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="9">
+        <xs:annotation>
+          <xs:documentation>Trio: 3 in first 3 (any order)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="13">
+        <xs:annotation>
+          <xs:documentation>Quarte+</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="17">
+        <xs:annotation>
+          <xs:documentation>Report</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="18">
+        <xs:annotation>
+          <xs:documentation>TIC 3</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="19">
+        <xs:annotation>
+          <xs:documentation>Classic Tierce</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="20">
+        <xs:annotation>
+          <xs:documentation>Multi</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="27">
+        <xs:annotation>
+          <xs:documentation>Quinte+</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="28">
+        <xs:annotation>
+          <xs:documentation>Quinte+ Special</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.satelliteinfo.co.uk/feed/master/hrdg" xmlns:target="http://www.satelliteinfo.co.uk/feed/master/hrdg">
+  <xs:import schemaLocation="commonattrib.xsd"/>
+  <xs:simpleType name="bool-enumeration">
+    <xs:annotation>
+      <xs:documentation>A boolean data type value represented by Y or N</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Y">
+        <xs:annotation>
+          <xs:documentation>Yes (true)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="N">
+        <xs:annotation>
+          <xs:documentation>No (false)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

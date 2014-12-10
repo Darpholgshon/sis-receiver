@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.satelliteinfo.co.uk/feed/master/hrdg" xmlns:target="http://www.satelliteinfo.co.uk/feed/master/hrdg">
+  <xs:import schemaLocation="commonattrib.xsd"/>
+  <xs:simpleType name="eventclass-enumeration">
+    <xs:annotation>
+      <xs:documentation>Bets on a meeting or match</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="2E">
+        <xs:annotation>
+          <xs:documentation>2 ball event</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3E">
+        <xs:annotation>
+          <xs:documentation>3 ball event</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BN">
+        <xs:annotation>
+          <xs:documentation>Number of Bookings</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CL">
+        <xs:annotation>
+          <xs:documentation>Colours</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CS">
+        <xs:annotation>
+          <xs:documentation>Correct Score</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EN">
+        <xs:annotation>
+          <xs:documentation>Even Numbers</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FG">
+        <xs:annotation>
+          <xs:documentation>First Goal Scorer</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LG">
+        <xs:annotation>
+          <xs:documentation>Last Goal Scorer</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PS">
+        <xs:annotation>
+          <xs:documentation>Player to Score</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FT">
+        <xs:annotation>
+          <xs:documentation>First Team to Score</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TG">
+        <xs:annotation>
+          <xs:documentation>Time of 1st Goal</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GB">
+        <xs:annotation>
+          <xs:documentation>Group Betting</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GS">
+        <xs:annotation>
+          <xs:documentation>Top Goal Scorer</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HF">
+        <xs:annotation>
+          <xs:documentation>Half Time / Full Time</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HP">
+        <xs:annotation>
+          <xs:documentation>Highest Partnership </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HR">
+        <xs:annotation>
+          <xs:documentation>Highest Run Scorer</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LT">
+        <xs:annotation>
+          <xs:documentation>Last Try Scorer</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LW">
+        <xs:annotation>
+          <xs:documentation>Leading Wicket Taker</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MM">
+        <xs:annotation>
+          <xs:documentation>Man of the Match</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NC">
+        <xs:annotation>
+          <xs:documentation>Number of Corners</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NR">
+        <xs:annotation>
+          <xs:documentation>To win in nominated round</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NW">
+        <xs:annotation>
+          <xs:documentation>Nationality of Winner</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OM">
+        <xs:annotation>
+          <xs:documentation>Order of Merit</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ON">
+        <xs:annotation>
+          <xs:documentation>Odd Numbers</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OW">
+        <xs:annotation>
+          <xs:documentation>overall winner </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="R1">
+        <xs:annotation>
+          <xs:documentation>winner round 1 grouping </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="R2">
+        <xs:annotation>
+          <xs:documentation>winner round 2 grouping </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="R3">
+        <xs:annotation>
+          <xs:documentation>winner round 3 grouping </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="R4">
+        <xs:annotation>
+          <xs:documentation>winner round 4 grouping </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SG">
+        <xs:annotation>
+          <xs:documentation>Time of 2nd Goal</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SO">
+        <xs:annotation>
+          <xs:documentation>Number of Sending Offs</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SP">
+        <xs:annotation>
+          <xs:documentation>First Scoring Play</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SW">
+        <xs:annotation>
+          <xs:documentation>Strokes taken by Winner</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TL">
+        <xs:annotation>
+          <xs:documentation>Time of Last Goal</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TS">
+        <xs:annotation>
+          <xs:documentation>Number of tries scored</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WM">
+        <xs:annotation>
+          <xs:documentation>Winning Margin</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WS">
+        <xs:annotation>
+          <xs:documentation>Winning Score</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
