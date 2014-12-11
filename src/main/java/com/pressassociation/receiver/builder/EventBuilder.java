@@ -1,6 +1,6 @@
-package com.pressassociation.receiver.builder.hrdg;
+package com.pressassociation.receiver.builder;
 
-import com.pressassociation.receiver.model.hrdg.*;
+import com.pressassociation.receiver.model.*;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.pressassociation.receiver.builder.hrdg;
+package com.pressassociation.receiver.builder;
 
-import com.pressassociation.receiver.model.hrdg.Data;
-import com.pressassociation.receiver.model.hrdg.Meeting;
-import com.pressassociation.receiver.model.xup.XupCommand;
+import com.pressassociation.receiver.model.Data;
+import com.pressassociation.receiver.model.Meeting;
+import com.pressassociation.receiver.model.XupDeleteCommand;
 
 import java.util.Date;
 import java.util.List;
@@ -11,13 +11,13 @@ import java.util.List;
  * ****************************************************************************************
  *
  * @author <a href="ralph.hodgson@pressassociation.com">Ralph Hodgson</a>
- * @since 10/12/2014 13:03
+ * @since 10/12/2014 15:14
  * <p>
  * ****************************************************************************************
  */
 public class DataBuilder {
   List<Meeting> meetingList;
-  XupCommand command;
+  XupDeleteCommand command;
   private String id; // e.g. "UKHRES4G5ZO1"
   private String book;
   private String category; // category-enum: HR, DG
@@ -25,7 +25,7 @@ public class DataBuilder {
   private Date date; // date e.g. "2014-12-04"
   private Date expiry; // date-time e.g. "2024-12-11T16:15:00"
   private String group;
-  private Long lastUpdate; // time as millis since 01/01/1970, e.g. "1417718750230"
+  private Date lastUpdate; // time as millis since 01/01/1970, e.g. "1417718750230"
   private String mnem; // mnemonic-enum: "ES", "EI", "EX", "MI", "RS", "JC", "NR"
   private String name;
   private String odec; // boolean flag Y or N
@@ -33,7 +33,7 @@ public class DataBuilder {
   private String route; // e.g. "4D41494E"
   private String source;
   private String sportcode; // 2-digit SIS code
-  private Long timestamp; // time as millis since 01/01/1970 e.g. "1417671004271"
+  private Date timestamp; // time as millis since 01/01/1970 e.g. "1417671004271"
   private String type; // Usually "master"
   private String antePost; // boolean string "yes" or "no"
   private String version; //="1.2.15"
@@ -50,7 +50,7 @@ public class DataBuilder {
     return this;
   }
 
-  public DataBuilder withCommand(XupCommand command) {
+  public DataBuilder withCommand(XupDeleteCommand command) {
     this.command = command;
     return this;
   }
@@ -90,7 +90,7 @@ public class DataBuilder {
     return this;
   }
 
-  public DataBuilder withLastUpdate(Long lastUpdate) {
+  public DataBuilder withLastUpdate(Date lastUpdate) {
     this.lastUpdate = lastUpdate;
     return this;
   }
@@ -130,7 +130,7 @@ public class DataBuilder {
     return this;
   }
 
-  public DataBuilder withTimestamp(Long timestamp) {
+  public DataBuilder withTimestamp(Date timestamp) {
     this.timestamp = timestamp;
     return this;
   }

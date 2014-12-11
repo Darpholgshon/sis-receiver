@@ -24,7 +24,7 @@ public class JMSReceiverRoute extends RouteBuilder {
 		 */
 		from("jms:queue:{{mq.queue.name}}")
 			.routeId(getClass().getSimpleName())
-			.to("log:INFO")
+			//.to("log:INFO")
 			.bean(FeedService.class, "handleXML");
 
 //			.choice()

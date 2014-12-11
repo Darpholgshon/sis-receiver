@@ -1,9 +1,13 @@
-package com.pressassociation.receiver.model.hrdg;
+package com.pressassociation.receiver.model;
 
 import com.google.common.base.Objects;
-import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.ElementList;
+import com.pressassociation.receiver.util.DateOnlyAdapter;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.Date;
 import java.util.List;
 
@@ -15,38 +19,40 @@ import java.util.List;
  * <p>
  * ****************************************************************************************
  */
-public class Meeting implements HrdgElement{
-  @Attribute
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Meeting extends HrdgElement{
+  @XmlAttribute
   private String name;
 
-  @Attribute
+  @XmlAttribute
   private String code;
 
-  @Attribute
+  @XmlAttribute
   private String country; // { country-enumeration },
 
-  @Attribute
+  @XmlAttribute
+  @XmlJavaTypeAdapter(DateOnlyAdapter.class)
   private Date date;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String coverageCode;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String going;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String status;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String sportcode;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String subcode;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String sourceId;
 
-  @ElementList(inline = true)
+  @XmlElement(required = false)
   List<Event> eventList;
 
   public String getName() {

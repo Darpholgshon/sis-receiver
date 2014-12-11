@@ -1,8 +1,11 @@
-package com.pressassociation.receiver.model.hrdg;
+package com.pressassociation.receiver.model;
 
 import com.google.common.base.Objects;
-import org.simpleframework.xml.*;
+import org.simpleframework.xml.Element;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import java.util.List;
 
 /**
@@ -13,78 +16,78 @@ import java.util.List;
  * <p>
  * ****************************************************************************************
  */
-@Root
-public class Event implements HrdgElement{
-  @Attribute
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Event extends HrdgElement{
+  @XmlAttribute
   private Integer id;
 
-  @Attribute
+  @XmlAttribute
   private String name;
 
-  @Attribute
+  @XmlAttribute
   private String distance;
 
-  @Attribute
+  @XmlAttribute
   private Integer num;
 
-  @Attribute
+  @XmlAttribute
   private Integer placesExpected;
 
-  @Attribute
+  @XmlAttribute
   private Integer eachWayPlaces;
 
-  @Attribute
+  @XmlAttribute
   private String time; // { xsd:time },
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String pmsg;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String status;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String progressCode;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String going;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String offTime; // { xsd:time }?,
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String courseType; // { coursetype-enumeration }?,
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String surface; // { surface-enumeration }?,
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String handicap; // { bool-enumeration }?,
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String coverageCode;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String grade;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private Integer runners;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String sourceId;
 
-  @ElementList(inline = true)
+  @Element
   private List<Selection> selection;
 
-  @Element(name = "bar")
+  @Element
   private Bar bar;
 
-  @Element(name = "result")
+  @Element
   private Result result;
 
-  @ElementList(inline = true)
+  @Element
   List<Racebet> racebetList;
 
-  @ElementList(inline = true, required = false)
+  @Element(required = false)
   List<Market> marketList;
 
   public Integer getId() {

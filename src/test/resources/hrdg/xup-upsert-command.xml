@@ -1,0 +1,11 @@
+<?oxygen RNGSchema="xup.rnc" type="compact"?>
+<data id = 'UKHRES359J001' type = 'update' date = '2004-10-06' version = "1.2.5" source="sportsData" country="UK"
+      name = "selection" category = "HR" route= '534453' timestamp= '1217339821075'
+      xmlns:xu='http://www.satelliteinfo.co.uk/feed/update'
+      xmlns:hrdg='http://www.satelliteinfo.co.uk/feed/master/hrdg'
+      xmlns='http://www.satelliteinfo.co.uk/feed/master/hrdg' >
+	<xu:ups-at select="hrdg:data/hrdg:meeting/hrdg:event/hrdg:selection[@num='4']" >
+		<xu:at name='name'>Runner 4</xu:at>
+		<xu:at name='jockey'>Willie Carson</xu:at>
+	</xu:ups-at>
+</data>

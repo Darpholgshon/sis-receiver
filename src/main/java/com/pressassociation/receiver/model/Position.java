@@ -1,12 +1,12 @@
-package com.pressassociation.receiver.model.hrdg;
+package com.pressassociation.receiver.model;
 
 /**
  * ****************************************************************************************
  *
  * @author <a href="ralph.hodgson@pressassociation.com">Ralph Hodgson</a>
- * @since 10/12/2014 11:43
+ * @since 10/12/2014 16:21
  * <p>
  * ****************************************************************************************
  */
-public class Bar {
+public class Position extends HrdgElement {
 }

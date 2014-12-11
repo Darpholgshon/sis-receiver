@@ -1,9 +1,11 @@
-package com.pressassociation.receiver.model.hrdg;
+package com.pressassociation.receiver.model;
 
 import com.google.common.base.Objects;
-import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.ElementList;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
 /**
@@ -14,66 +16,67 @@ import java.util.List;
  * <p>
  * ****************************************************************************************
  */
-public class Selection implements HrdgElement{
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Selection extends HrdgElement{
 
-  @Attribute
+  @XmlAttribute
   private Integer id;
 
-  @Attribute
+  @XmlAttribute
   private String name;
 
-  @Attribute
+  @XmlAttribute
   private Integer num;
 
-  @Attribute
+  @XmlAttribute
   private String status;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String jockey;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String reservename;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String claiming;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String sourceId;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private Integer weightStones;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private Integer weightPounds;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String coupled;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String drawn;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String uniqueId;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String wide;// bool-enumeration }?,
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private Integer age;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String trainer;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String lastRuns;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String silk;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String silkFile;
 
-  @ElementList(inline = true, required = false)
+  @XmlElement(required = false)
   List<Price> priceList;
 
   public Integer getId() {

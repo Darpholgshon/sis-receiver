@@ -1,7 +1,10 @@
-package com.pressassociation.receiver.model.hrdg;
+package com.pressassociation.receiver.model;
 
 import com.google.common.base.Objects;
-import org.simpleframework.xml.Attribute;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  * ****************************************************************************************
@@ -11,26 +14,27 @@ import org.simpleframework.xml.Attribute;
  * <p>
  * ****************************************************************************************
  */
-public class Price implements HrdgElement{
-	@Attribute
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Price extends HrdgElement{
+	@XmlAttribute
 	private Integer id;
   
-	@Attribute
+	@XmlAttribute
 	private Double dec;
   
-	@Attribute
+	@XmlAttribute
 	private String fract;
   
-	@Attribute
+	@XmlAttribute
 	private Integer mktnum;
   
-	@Attribute
+	@XmlAttribute
 	private String mkttype;
   
-	@Attribute
+	@XmlAttribute
 	private String time; // xsd:time
   
-	@Attribute
+	@XmlAttribute
 	private Long timestamp; // time in millis since 01/01/1970
 
   public Integer getId() {

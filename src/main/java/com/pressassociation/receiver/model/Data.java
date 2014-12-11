@@ -1,9 +1,11 @@
-package com.pressassociation.receiver.model.hrdg;
+package com.pressassociation.receiver.model;
 
 import com.google.common.base.Objects;
-import com.pressassociation.receiver.model.xup.XupCommand;
-import org.simpleframework.xml.*;
+import com.pressassociation.receiver.util.DateOnlyAdapter;
+import com.pressassociation.receiver.util.TimestampAdapter;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.Date;
 import java.util.List;
 
@@ -15,74 +17,83 @@ import java.util.List;
  * <p>
  * ****************************************************************************************
  */
-@Root
-@NamespaceList({
-        @Namespace(reference = "http://www.satelliteinfo.co.uk/feed/master/hrdg"),
-        @Namespace(reference = "http://www.satelliteinfo.co.uk/feed/update", prefix = "xu")
-})
+@XmlRootElement(name = "data")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Data {
-  @ElementList(inline = true, required = false)
+
+  @XmlElement(name = "meeting")
   List<Meeting> meetingList;
 
-  @Element(type = XupCommand.class, required = false)
-  @Namespace(reference = "http://www.satelliteinfo.co.uk/feed/update")
-  XupCommand command;
+  @XmlElements(value = {
+          @XmlElement(namespace="http://www.satelliteinfo.co.uk/feed/update", name="append", type=XupCommand.class),
+          @XmlElement(namespace="http://www.satelliteinfo.co.uk/feed/update", name="ins-pre", type=XupCommand.class),
+          @XmlElement(namespace="http://www.satelliteinfo.co.uk/feed/update", name="ins-post", type=XupCommand.class),
+          @XmlElement(namespace="http://www.satelliteinfo.co.uk/feed/update", name="update", type=XupCommand.class),
+          @XmlElement(namespace="http://www.satelliteinfo.co.uk/feed/update", name="del", type=XupDeleteCommand.class),
+          @XmlElement(namespace="http://www.satelliteinfo.co.uk/feed/update", name="ins", type=XupCommand.class),
+          @XmlElement(namespace="http://www.satelliteinfo.co.uk/feed/update", name="munge", type=XupCommand.class),
+          @XmlElement(namespace="http://www.satelliteinfo.co.uk/feed/update", name="ups-at", type=XupUpsertCommand.class),
+  })
+  Object command;
 
-  @Attribute
+  @XmlAttribute
   private String id; // e.g. "UKHRES4G5ZO1"
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String book;
 
-  @Attribute
+  @XmlAttribute
   private String category; // category-enum: HR, DG
 
-  @Attribute
+  @XmlAttribute
   private String country; // country-enum: e.g. "UK"
 
-  @Attribute
+  @XmlAttribute
+  @XmlJavaTypeAdapter(DateOnlyAdapter.class)
   private Date date; // date e.g. "2014-12-04"
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private Date expiry; // date-time e.g. "2024-12-11T16:15:00"
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String group;
 
-  @Attribute(required = false)
-  private Long lastUpdate; // time as millis since 01/01/1970, e.g. "1417718750230"
+  @XmlAttribute(required = false)
+  @XmlJavaTypeAdapter(TimestampAdapter.class)
+  private Date lastUpdate; // time as millis since 01/01/1970, e.g. "1417718750230"
 
-  @Attribute
+  @XmlAttribute
   private String mnem; // mnemonic-enum: "ES", "EI", "EX", "MI", "RS", "JC", "NR"
 
-  @Attribute
+  @XmlAttribute
   private String name;
 
-  @Attribute
+  @XmlAttribute
   private String odec; // boolean flag Y or N
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String refresh; // boolean string "yes" or "no"
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String route; // e.g. "4D41494E"
 
-  @Attribute
+  @XmlAttribute
   private String source;
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String sportcode; // 2-digit SIS code
 
-  @Attribute(required = false)
-  private Long timestamp; // time as millis since 01/01/1970 e.g. "1417671004271"
+  @XmlAttribute(required = false)
+  @XmlJavaTypeAdapter(TimestampAdapter.class)
+  private Date timestamp; // time as millis since 01/01/1970 e.g. "1417671004271"
 
-  @Attribute
+  @XmlAttribute
   private String type; // Usually "master"
 
-  @Attribute(required = false)
+  @XmlAttribute(required = false)
   private String antePost; // boolean string "yes" or "no"
 
-  @Attribute
+  @XmlAttribute
   private String version; //="1.2.15"
 
   public List<Meeting> getMeetingList() {
@@ -93,11 +104,11 @@ public class Data {
     this.meetingList = meetingList;
   }
 
-  public XupCommand getCommand() {
+  public Object getCommand() {
     return command;
   }
 
-  public void setCommand(XupCommand command) {
+  public void setCommand(Object command) {
     this.command = command;
   }
 
@@ -157,11 +168,11 @@ public class Data {
     this.group = group;
   }
 
-  public Long getLastUpdate() {
+  public Date getLastUpdate() {
     return lastUpdate;
   }
 
-  public void setLastUpdate(Long lastUpdate) {
+  public void setLastUpdate(Date lastUpdate) {
     this.lastUpdate = lastUpdate;
   }
 
@@ -221,11 +232,11 @@ public class Data {
     this.sportcode = sportcode;
   }
 
-  public Long getTimestamp() {
+  public Date getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(Long timestamp) {
+  public void setTimestamp(Date timestamp) {
     this.timestamp = timestamp;
   }
 

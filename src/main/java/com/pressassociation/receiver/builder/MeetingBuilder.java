@@ -1,7 +1,7 @@
-package com.pressassociation.receiver.builder.hrdg;
+package com.pressassociation.receiver.builder;
 
-import com.pressassociation.receiver.model.hrdg.Event;
-import com.pressassociation.receiver.model.hrdg.Meeting;
+import com.pressassociation.receiver.model.Event;
+import com.pressassociation.receiver.model.Meeting;
 
 import java.util.Date;
 import java.util.List;

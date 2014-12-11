@@ -1,4 +1,4 @@
-package com.pressassociation.receiver.model.hrdg;
+package com.pressassociation.receiver.model;
 
 /**
  * ****************************************************************************************
@@ -8,5 +8,5 @@ package com.pressassociation.receiver.model.hrdg;
  * <p>
  * ****************************************************************************************
  */
-public class Result implements HrdgElement{
+public class Result extends HrdgElement{
 }

@@ -1,9 +1,8 @@
-package com.pressassociation.receiver.model.xup;
+package com.pressassociation.receiver.model;
 
 import com.google.common.base.Objects;
-import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.ElementList;
 
+import javax.xml.bind.annotation.*;
 import java.util.List;
 
 /**
@@ -14,20 +13,12 @@ import java.util.List;
  * <p>
  * ****************************************************************************************
  */
-public class Upsert implements XupCommand{
-  @Attribute
-  private String select;
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(namespace = "http://www.satelliteinfo.co.uk/feed/update")
+public class XupUpsertCommand extends XupDeleteCommand {
 
-  @ElementList(inline = true)
+  @XmlElement(name="at", namespace = "http://www.satelliteinfo.co.uk/feed/update")
   private List<At> list;
-
-  public String getSelect() {
-    return select;
-  }
-
-  public void setSelect(String select) {
-    this.select = select;
-  }
 
   public List<At> getList() {
     return list;
